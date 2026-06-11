@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436e38cc46145b84abe0ccf41b6e4efc, type: 3}
+  m_Name: Level_00
+  m_EditorClassIdentifier: Game::Game.LevelConfig
+  LevelID: 0
+  RequiredLevels: 
+  LevelTitle: "\u6D4B\u8BD5\u5173\u5361"
+  LevelDescription: "        \u628A\u4EE3\u7801\u62D6\u5230\u8FD9\u4E2A\u533A\u57DF\u6765\u7EC4\u6210\u4F60\u7684\u7A0B\u5E8F\u3002\n       
+    \u4F60\u7684\u7A0B\u5E8F\u5FC5\u987B\u80FD\u544A\u8BC9\u4F60\uFF0C\u5BF9\u4E8EINBOX(\u8F93\u5165\u680F)\u91CC\u7684\u6BCF\u4E2A\u4E1C\u897F\uFF0C\u4F60\u90FD\u5F97\u628A\u5B83\u7ED9\u53D6\u51FA\u6765\uFF0C\u518D\u4E22\u8FDBOUTBOX(\u8F93\u51FA\u680F)\u91CC\u3002"
+  OptimalLines: 0
+  OptimalSteps: 0
+  GameMode: 0
+  GridRows: 5
+  GridCols: 5
+  InitialDataCubes:
+  - Index: 12
+    Value: 34
+  - Index: 4
+    Value: false
+  - Index: 24
+    Value: 0
+  AvailableOperations:
+    InBox:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    OutBox:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    CopyTo:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    CopyFrom:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    Arithmetic:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    Jump:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    Label:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+  CorrectOperations: "--THIRTEEN MILLIONS GRADUATES--\r\n\r\na:\r\n    INBOX\r\n   
+    OUTBOX\r\n    JUMP ANY a\r\n"
+  VisualInputCubes:
+  - 1
+  - 1
+  - 3
+  - 4
+  TestInputCubes:
+  - Values:
+    - 1
+    - 2
+    - 3
+    - 4
+  ActiveTalk:
+  - "\u8FD9\u662F\u6253\u62DB\u547C\uFF01"
+  MoreTalk:
+  - "\u8FD9\u662F\u8BF4\u5E9F\u8BDD\uFF01\uFF1F"
+  ExampleTalk:
+  - "\u8FD9\u662F\u793A\u4F8B\u3002"
+  OptimalTalk:
+  - "\u7CBE\u76CA\u6C42\u7CBE\uFF01"
+  BGM: {fileID: 8300000, guid: 6d19eeab6a8223d45af840d158f12484, type: 3}

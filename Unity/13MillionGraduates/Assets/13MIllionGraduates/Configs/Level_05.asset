@@ -1,0 +1,232 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436e38cc46145b84abe0ccf41b6e4efc, type: 3}
+  m_Name: Level_05
+  m_EditorClassIdentifier: Game::Game.LevelConfig
+  LevelID: 5
+  RequiredLevels: 03000000
+  LevelTitle: "\u671F\u4E2D\u6392\u540D"
+  LevelDescription: "        \u671F\u4E2D\u8003\u8BD5\u7ED3\u675F\u4E86\u3002INBOX(\u8F93\u5165\u680F)\u4E2D\u4F9D\u6B21\u8BB0\u5F55\u7740\u5B66\u751F\u59D3\u540D\u548C\u5BF9\u5E94\u6210\u7EE9\uFF0C\u8F93\u5165\u4EE5\u300C0\u300D\u4F5C\u4E3A\u7ED3\u675F\u6807\u8BB0\u3002\u53C2\u4E0E\u6392\u540D\u7684\u5B66\u751F\u4EBA\u6570\u4E3A3~9\u4EBA\uFF0C\u6210\u7EE9\u8303\u56F4\u4E3A0~100\u5206\u3002\r\n       
+    \u8BF7\u627E\u51FA\u6210\u7EE9\u6700\u9AD8\u7684\u4E24\u540D\u5B66\u751F\uFF0C\u5E76\u5C06\u4ED6\u4EEC\u7684\u59D3\u540D\u6309\u6210\u7EE9\u4ECE\u9AD8\u5230\u4F4E\u7684\u987A\u5E8F\u9001\u5165OUTBOX(\u8F93\u51FA\u680F)\u3002\u82E5\u51FA\u73B0\u76F8\u540C\u6210\u7EE9\uFF0C\u8BF7\u4FDD\u6301\u539F\u6709\u8F93\u5165\u987A\u5E8F\u3002"
+  OptimalLines: 41
+  OptimalSteps: 234
+  GameMode: 0
+  GridRows: 5
+  GridCols: 5
+  InitialDataCubes:
+  - Index: 20
+    Value: 0
+  - Index: 24
+    Value: 10
+  AvailableOperations:
+    InBox:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    OutBox:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    CopyTo:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    CopyFrom:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    Arithmetic:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    Jump:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    Label:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+  CorrectOperations: "--THIRTEEN MILLIONS GRADUATES--\r\n\r\n    COPYFROM 20\r\n   
+    COPYTO 9\r\n    COPYTO 23\r\n    ARITHMETIC INC 23\r\n    ARITHMETIC INC 23\r\n   
+    COPYFROM 24\r\n    COPYTO 19\r\na:\r\n    INBOX\r\n    JUMP ZRO b\r\n    COPYTO
+    [19]\r\n    ARITHMETIC INC 19\r\n    INBOX\r\n    COPYTO [9]\r\n    ARITHMETIC
+    INC 9\r\n    JUMP ANY a\r\nb:\r\n    JUMP ANY d\r\nc:\r\n    COPYFROM 20\r\n   
+    COPYTO 22\r\n    ARITHMETIC DEC 22\r\n    COPYTO [21]\r\n    COPYFROM 20\r\nd:\r\n   
+    COPYTO 21\r\n    COPYTO 22\r\n    JUMP ANY g\r\ne:\r\nf:\r\n    ARITHMETIC INC
+    22\r\n    ARITHMETIC SUB 9\r\n    JUMP ZRO h\r\ng:\r\n    COPYFROM [22]\r\n   
+    ARITHMETIC GTR [21]\r\n    JUMP ZRO e\r\n    COPYFROM 22\r\n    COPYTO 21\r\n   
+    JUMP ANY f\r\nh:\r\n    COPYFROM 21\r\n    ARITHMETIC ADD 24\r\n    COPYTO 22\r\n   
+    COPYFROM [22]\r\n    OUTBOX\r\n    ARITHMETIC DEC 23\r\n    JUMP NEG i\r\n   
+    JUMP ANY c\r\ni:\r\n"
+  VisualInputCubes: []
+  TestInputCubes:
+  - Values:
+    - A
+    - 32
+    - B
+    - 54
+    - C
+    - 87
+    - D
+    - 90
+    - E
+    - 0
+    - F
+    - 37
+    - G
+    - 23
+    - H
+    - 12
+    - I
+    - 64
+    - 0
+  - Values:
+    - A
+    - 0
+    - B
+    - 0
+    - C
+    - 0
+    - D
+    - 0
+    - 0
+  - Values:
+    - A
+    - 75
+    - B
+    - 34
+    - C
+    - 99
+    - D
+    - 99
+    - E
+    - 52
+    - F
+    - 99
+    - 0
+  - Values:
+    - A
+    - 99
+    - B
+    - 98
+    - C
+    - 97
+    - D
+    - 96
+    - E
+    - 95
+    - F
+    - 94
+    - 0
+  - Values:
+    - A
+    - 80
+    - B
+    - 81
+    - C
+    - 82
+    - D
+    - 83
+    - E
+    - 84
+    - F
+    - 85
+    - 0
+  - Values:
+    - A
+    - 41
+    - B
+    - 52
+    - C
+    - 76
+    - D
+    - 47
+    - E
+    - 99
+    - F
+    - 76
+    - 0
+  - Values:
+    - A
+    - 0
+    - B
+    - 0
+    - C
+    - 0
+    - D
+    - 0
+    - E
+    - 99
+    - F
+    - 0
+    - G
+    - 57
+    - H
+    - 0
+    - 0
+  ActiveTalk:
+  - "\u671F\u4E2D\u8003\u8BD5\u7ED3\u675F\u4E86\uFF01"
+  - "\u7EC8\u4E8E\u5230\u4E86\\n\u516C\u5E03\u6392\u540D\u7684\u65F6\u5019\u3002"
+  - "\u5B66\u6821\u4E00\u76F4\u9F13\u52B1\u540C\u5B66\u4EEC\\n\u5171\u540C\u8FDB\u6B65\u3002"
+  - "\u6240\u4EE5\u63A5\u4E0B\u6765\uFF0C\\n\u6211\u4EEC\u4F1A\u5148\u627E\u51FA\\n\u6700\u4F18\u79C0\u7684\u90A3\u51E0\u4F4D\u540C\u5B66\u3002"
+  - "\u81F3\u4E8E\u5269\u4E0B\u7684\u4EBA\u2014\u2014"
+  - "\u4ED6\u4EEC\u540C\u6837\u53C2\u4E0E\u4E86\\n\u5171\u540C\u8FDB\u6B65\u3002"
+  MoreTalk:
+  - "\u4E3A\u4E86\u5236\u4F5C\u5149\u8363\u699C\uFF0C\\n\u5B66\u6821\u4E13\u95E8\\n\u817E\u51FA\u4E86\u51E0\u5757\u7A7A\u767D\u533A\u57DF\u3002"
+  - "\u867D\u7136\u6570\u91CF\u4E0D\u591A\uFF0C\\n\u4F46\u5DF2\u7ECF\u662F\\n\u9884\u7B97\u5141\u8BB8\u7684\u6781\u9650\u4E86\u3002"
+  - "\u542C\u8BF4\u6709\u7684\u73ED\u7EA7\\n\u4EBA\u6570\u592A\u591A\uFF0C"
+  - "\u5149\u662F\u6574\u7406\u540D\u5355\uFF0C\\n\u5C31\u5F97\u628A\u6700\u540E\u4E00\u5757\u7A7A\u4F4D\\n\u4E5F\u5229\u7528\u8D77\u6765\u3002"
+  - "\u6559\u80B2\u8D44\u6E90\u6765\u4E4B\u4E0D\u6613\u3002\\n\u4E0D\u8FC7\u8BF7\u653E\u5FC3\u3002"
+  - "\u4F18\u79C0\u7684\u5B66\u751F\uFF0C\\n\u603B\u80FD\u627E\u5230\u81EA\u5DF1\u7684\u4F4D\u7F6E\u3002"
+  ExampleTalk:
+  - "\u5982\u679C\u4F60\u7684INBOX(\u8F93\u5165\u680F)\u91CC\u6709:\n\u8D75 90 \u94B1
+    100 \u5B59 80 \u674E 30 0\r\n\u90A3\u4F60\u7684OUTBOX(\u8F93\u51FA\u680F)\u91CC\u5E94\u8BE5:\n\u94B1
+    \u8D75 \u5B59"
+  OptimalTalk:
+  - "\u8BC4\u5206\u6807\u51C6\u6559\u52A1\u5904\u8FD8\u6CA1\u53D1\u6211\u3002\n\u4F60\u5148\u8FC7\u5173\u5427\uFF0C\u5230\u65F6\u5019\u81EA\u5DF1\u770B\u3002"
+  BGM: {fileID: 8300000, guid: 7d87236a3c31648408d37aca4d5ed67a, type: 3}

@@ -1,0 +1,209 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 436e38cc46145b84abe0ccf41b6e4efc, type: 3}
+  m_Name: Level_04
+  m_EditorClassIdentifier: Game::Game.LevelConfig
+  LevelID: 4
+  RequiredLevels: 02000000
+  LevelTitle: "\u9886\u5BFC\u89C6\u5BDF"
+  LevelDescription: "        \u5B66\u6821\u9886\u5BFC\u6765\u64CD\u573A\u89C6\u5BDF\u8BFE\u95F4\u64CD\u4E86\u3002\r\n       
+    \u961F\u4F0D\u4E2D\uFF0C\u7537\u751F\u548C\u5973\u751F\u4ECD\u7136\u6309\u7167\u95F4\u9694\u987A\u5E8F\u7AD9\u7ACB\u2014\u2014\u5947\u6570\u4F4D\u662F\u7537\u751F\uFF0C\u5076\u6570\u4F4D\u662F\u5973\u751F\u3002INBOX(\u8F93\u5165\u680F)\u4E2D\u6309\u7AD9\u4F4D\u987A\u5E8F\u8BB0\u5F55\u7740\u5B66\u751F\u59D3\u540D\uFF0C\u8F93\u5165\u4EE5\u300C0\u300D\u4F5C\u4E3A\u7ED3\u675F\u6807\u8BB0\u3002\u961F\u4F0D\u4EBA\u6570\u4E3A
+    6~16 \u4EBA\u3002\r\n        \u4E3A\u4E86\u65B9\u4FBF\u9886\u5BFC\u68C0\u67E5\uFF0C\u8BF7\u5148\u6309\u4ECE\u540E\u5230\u524D\u7684\u987A\u5E8F\u5904\u7406\u6240\u6709\u7537\u751F\uFF0C\u518D\u6309\u539F\u987A\u5E8F\u5904\u7406\u6240\u6709\u5973\u751F\uFF0C\u5E76\u4F9D\u6B21\u9001\u5165OUTBOX(\u8F93\u51FA\u680F)\u3002\u5982\u679C\u4ECD\u7136\u4E0D\u6E05\u695A\u8981\u6C42\uFF0C\u53EF\u4EE5\u5411\u4F60\u7684\u8001\u5E08\u83B7\u53D6\u793A\u4F8B\u3002"
+  OptimalLines: 22
+  OptimalSteps: 129
+  GameMode: 0
+  GridRows: 5
+  GridCols: 5
+  InitialDataCubes:
+  - Index: 20
+    Value: 0
+  - Index: 24
+    Value: 10
+  AvailableOperations:
+    InBox:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    OutBox:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    CopyTo:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    CopyFrom:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    Arithmetic:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    Jump:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+    Label:
+      Enabled: 1
+      Addressabled: 1
+      Arithmetic_Basic: 1
+      Arithmetic_Unary: 1
+      Arithmetic_Compare: 1
+      Jump_Always: 1
+      Jump_IfZero: 1
+      Jump_IfNegative: 1
+  CorrectOperations: "--THIRTEEN MILLIONS GRADUATES--\r\n\r\n    COPYFROM 24\r\n   
+    COPYTO 23\r\na:\r\n    INBOX\r\n    JUMP ZRO c\r\n    COPYTO [20]\r\n    ARITHMETIC
+    INC 20\r\n    INBOX\r\n    JUMP ZRO b\r\n    COPYTO [24]\r\n    ARITHMETIC INC
+    24\r\n    JUMP ANY a\r\nb:\r\nc:\r\nd:\r\n    ARITHMETIC DEC 20\r\n    JUMP NEG
+    e\r\n    COPYFROM [20]\r\n    OUTBOX\r\n    JUMP ANY d\r\ne:\r\nf:\r\n    COPYFROM
+    [23]\r\n    OUTBOX\r\n    ARITHMETIC INC 23\r\n    ARITHMETIC SUB 24\r\n    JUMP
+    ZRO g\r\n    JUMP ANY f\r\ng:\r\n"
+  VisualInputCubes: []
+  TestInputCubes:
+  - Values:
+    - "\u674E"
+    - "\u5415"
+    - "\u8D75"
+    - "\u725B"
+    - "\u8463"
+    - "\u738B"
+    - "\u6731"
+    - "\u80E1"
+    - "\u51AF"
+    - "\u5B59"
+    - "\u9648"
+    - "\u94B1"
+    - "\u5F90"
+    - "\u5468"
+    - "\u5434"
+    - "\u90D1"
+    - 0
+  - Values:
+    - F
+    - A
+    - V
+    - K
+    - B
+    - G
+    - 0
+  - Values:
+    - a
+    - g
+    - h
+    - c
+    - l
+    - o
+    - u
+    - p
+    - t
+    - u
+    - p
+    - 0
+  - Values:
+    - 532
+    - 54
+    - 34
+    - 345
+    - 65
+    - 4
+    - 213
+    - 897
+    - 65
+    - 7
+    - 48
+    - 568
+    - 2
+    - 0
+  - Values:
+    - n
+    - d
+    - 3
+    - 4
+    - u
+    - o
+    - h
+    - 3
+    - p
+    - b
+    - g
+    - l
+    - j
+    - k
+    - 0
+  - Values:
+    - "\u674E"
+    - "\u5468"
+    - "\u51AF"
+    - "\u80E1"
+    - "\u6731"
+    - "\u5415"
+    - "\u5B59"
+    - "\u738B"
+    - "\u8463"
+    - "\u8D75"
+    - "\u94B1"
+    - "\u725B"
+    - "\u5F90"
+    - "\u5434"
+    - "\u9648"
+    - 0
+  ActiveTalk:
+  - "\u9886\u5BFC\u9A6C\u4E0A\u5C31\u8981\u5230\u4E86\uFF01"
+  - "\u8FD8\u8BB0\u5F97\u4E0A\u6B21\\n\u8BFE\u95F4\u64CD\u5417\uFF1F"
+  - "\u7537\u751F\u5148\u51FA\u5217\uFF0C\\n\u5973\u751F\u540E\u51FA\u5217\u3002"
+  - "\u8FD9\u6B21\u9886\u5BFC\u8981\u6C42\\n\u770B\u5F97\u66F4\u4ED4\u7EC6\u4E00\u4E9B\u3002"
+  - "\u6240\u4EE5\u7537\u751F\u8981\u4ECE\\n\u961F\u4F0D\u6700\u540E\u9762\u5F00\u59CB\u68C0\u67E5\u3002"
+  - "\u81F3\u4E8E\u90A3\u4E9B\\n\u6CA1\u6709\u5973\u540C\u684C\u7684\u7537\u751F\u2014\u2014"
+  - "\u653E\u5FC3\u3002\\n\u9886\u5BFC\u4E5F\u662F\u80FD\u770B\u89C1\u4ED6\u4EEC\u7684\u3002"
+  MoreTalk:
+  - "\u4E3A\u4E86\u8FCE\u63A5\u672C\u6B21\u89C6\u5BDF\uFF0C"
+  - "\u5B66\u6821\u63D0\u524D\u51C6\u5907\u4E86\uFF1A\\n\u6A2A\u5E45\u3001\u6807\u8BED\u3001\u5C55\u677F\u3001\\n\u4EE5\u53CA\u4F60\u4EEC\u3002"
+  - "\u5E0C\u671B\u4E00\u5207\u987A\u5229\u3002"
+  ExampleTalk:
+  - "\u5982\u679C\u4F60\u7684INBOX(\u8F93\u5165\u680F)\u91CC\u6709: \n\u8D75 \u94B1
+    \u5B59 \u674E \u5468 \u5434 \u90D1 \u738B 0 \r\n\u90A3\u4F60\u7684OUTBOX(\u8F93\u51FA\u680F)\u91CC\u5E94\u8BE5:\n\u90D1
+    \u5468 \u5B59 \u8D75 \u94B1 \u674E \u5434 \u738B"
+  OptimalTalk:
+  - "\u8BC4\u5206\u6807\u51C6\u6559\u52A1\u5904\u8FD8\u6CA1\u53D1\u6211\u3002\n\u4F60\u5148\u8FC7\u5173\u5427\uFF0C\u5230\u65F6\u5019\u81EA\u5DF1\u770B\u3002"
+  BGM: {fileID: 8300000, guid: 7405c1949b3a85246af07df9ebe85190, type: 3}
