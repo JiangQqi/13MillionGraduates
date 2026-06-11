@@ -92,13 +92,13 @@ namespace Game.UI
 
         private void Update()
         {
-            Vector2 mousePos = Mouse.current.position.ReadValue();
-            m_IsHovering = mousePos.x / Screen.width >= .754f;
+            Vector2 canvasPos = LetterboxManager.MousePosition;
+            m_IsHovering = canvasPos.x >= 1930f;
 
             switch (m_State)
             {
                 case CodeManagerState.Inserting:
-                    float yOffset = UpLeft.y - mousePos.y;
+                    float yOffset = LetterboxManager.WorldToCanvasY(UpLeft) - canvasPos.y;
                     m_InsertIndex = (int)((yOffset - 2.5f) / 75f);
                     m_InsertIndex = Math.Clamp(m_InsertIndex, 0, Codes.Count);
 

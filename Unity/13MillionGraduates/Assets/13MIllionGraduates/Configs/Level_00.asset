@@ -24,7 +24,7 @@ MonoBehaviour:
   GridCols: 5
   InitialDataCubes:
   - Index: 12
-    Value: 34
+    Value: 100
   - Index: 4
     Value: false
   - Index: 24

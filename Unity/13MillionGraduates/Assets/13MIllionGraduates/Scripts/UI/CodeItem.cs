@@ -88,7 +88,7 @@ namespace Game.UI
 
             Vector3 offsetDest = m_Destination + Vector3.left * 70f;
 
-            Vector3 mouse = Mouse.current.position.ReadValue();
+            Vector3 mouse = LetterboxManager.MouseWorldPosition;
             switch (m_State)
             {
                 case CodeItemState.Lerping:

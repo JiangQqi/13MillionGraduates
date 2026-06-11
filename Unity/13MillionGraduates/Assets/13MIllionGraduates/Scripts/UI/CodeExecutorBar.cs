@@ -1,6 +1,5 @@
 using System.Linq;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 namespace Game.UI
@@ -88,7 +87,7 @@ namespace Game.UI
         {
             if (!m_IsHandleInteractable) return;
 
-            float mouseX = Mouse.current.position.ReadValue().x;
+            float mouseX = LetterboxManager.MousePosition.x;
             Handler.localPosition = new Vector2(Mathf.Clamp(mouseX - 780f, 160f, 400f), 10f);
 
             float t = (Handler.localPosition.x - 160f) / (400f - 160f);

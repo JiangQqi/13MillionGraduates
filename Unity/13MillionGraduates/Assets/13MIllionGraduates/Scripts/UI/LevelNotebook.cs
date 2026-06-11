@@ -37,5 +37,14 @@ namespace Game.UI
                 item.Init(cfg, state, StateSprites[state], AdvanceSprites[advance], cfg.LevelTitle);
             }
         }
+
+        public void QuitGame()
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+        }
     }
 }

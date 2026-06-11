@@ -61,15 +61,17 @@ namespace Game.UI
 
         private void Awake()
         {
-            transform.localPosition = new Vector3(2000f, 600f, 0f);
-
-            m_StartPos = MainPanel.localPosition;
-            m_OffsetY = 0;
-
-            m_OpeartionStartPos = OperationFrame.localPosition;
-
             LevelManager.Ins.OnLevelInitialized += OnLevelInitialized;
             GameManager.Ins.OnGameInitialized += () => StartCoroutine(Entrance());
+        }
+
+        private void Start()
+        {
+            // 放到 Start 确保 LetterboxManager.Awake 先调整好 viewport
+            transform.localPosition = new Vector3(2000f, 600f, 0f);
+            m_StartPos = MainPanel.localPosition;
+            m_OffsetY = 0;
+            m_OpeartionStartPos = OperationFrame.localPosition;
         }
 
         private void OnLevelInitialized()
@@ -139,12 +141,12 @@ namespace Game.UI
         {
             if (!m_InEntranced) return;
 
-            Vector2 mousePos = Mouse.current.position.ReadValue();
-            m_IsHovering = mousePos.x / Screen.width >= .754f;
+            Vector2 canvasPos = LetterboxManager.MousePosition;
+            m_IsHovering = canvasPos.x >= 1930f;
             if (m_IsDragging)
             {
                 float lowestY = 1200f - PanelHeight;
-                m_OffsetY = m_DragStartMouseYAddOffsetY - mousePos.y;
+                m_OffsetY = m_DragStartMouseYAddOffsetY - canvasPos.y;
                 if (m_OffsetY < lowestY)
                 {
                     float overflow = lowestY - m_OffsetY;
@@ -159,7 +161,7 @@ namespace Game.UI
 
                 if (CodeManager.IsInserting)
                 {
-                    float y = Mathf.Clamp01(mousePos.y / Screen.height);
+                    float y = Mathf.Clamp01(canvasPos.y / 1440f);
                     if (y >= .9f) m_OffsetY += (y - .9f) * 100f;
                     else if (y <= .1f) m_OffsetY -= (.1f - y) * 100f;
                 }
@@ -176,7 +178,7 @@ namespace Game.UI
             if (eventData.button != PointerEventData.InputButton.Left) return;
             if (CodeExecutor.Ins.IsRunning || CodeExecutor.Ins.IsPassed) return;
             m_IsDragging = true;
-            m_DragStartMouseYAddOffsetY = Mouse.current.position.ReadValue().y + m_OffsetY;
+            m_DragStartMouseYAddOffsetY = LetterboxManager.MousePosition.y + m_OffsetY;
         }
 
         public void OnPointerUp(PointerEventData eventData)
@@ -215,8 +217,9 @@ namespace Game.UI
             OperationFrame.sizeDelta = new Vector2(276f, height);
         }
 
-        public void ScrollToCodeItem(float itemY)
+        public void ScrollToCodeItem(float worldItemY)
         {
+            float itemY = LetterboxManager.WorldToCanvasY(new Vector3(0f, worldItemY, 0f));
             if (itemY >= 70f && itemY <= 1370f)
                 return;
 
