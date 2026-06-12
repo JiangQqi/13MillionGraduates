@@ -20,9 +20,21 @@ MonoBehaviour:
   OptimalLines: 0
   OptimalSteps: 0
   GameMode: 0
-  GridRows: 0
-  GridCols: 0
-  InitialDataCubes: []
+  GridRows: 5
+  GridCols: 5
+  InitialDataCubes:
+  - Index: 0
+    Value: 1
+  - Index: 1
+    Value: 2
+  - Index: 5
+    Value: 1
+  - Index: 6
+    Value: a
+  - Index: 10
+    Value: false
+  - Index: 11
+    Value: a
   AvailableOperations:
     InBox:
       Enabled: 1
@@ -127,7 +139,7 @@ MonoBehaviour:
     - 3
     - 4
   ActiveTalk:
-  - '                       '
+  - "\u8FD9\u662F\u6253\u62DB\u547C\uFF01"
   MoreTalk:
   - "\u8FD9\u662F\u8BF4\u5E9F\u8BDD\uFF01\uFF1F"
   ExampleTalk:

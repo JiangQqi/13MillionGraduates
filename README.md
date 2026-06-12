@@ -82,9 +82,26 @@
 | **Advanced 模式未完成** | `AreaManager` 的区域划分系统已搭建好框架，但 CopyTo / CopyFrom / Arithmetic 的具体操作逻辑在 Advanced 分支中均为空 `break;`，目前仅 Classic 模式可用 |
 | **部分动画存在轻微视觉瑕疵** | 少量动画过渡有微小视觉 Bug，不影响游戏逻辑 |
 
+## 版权说明
+
+### 代码
+
+本项目代码以 [MIT License](LICENSE) 开源。
+
+### 美术
+
+所有美术资源使用 Photoshop + Blender 参照原版游戏手绘复刻，默片风格。
+
+### 音乐
+
+- 部分背景音乐来自原版游戏官方公开发布的 OST（版权归 Tomorrow Corporation 所有）
+- 其余为无版权素材
+
 ## License
 
-MIT License
+本项目代码部分采用 [MIT License](LICENSE)。美术和音频资源不属于 MIT 覆盖范围，请参考上方版权说明。
+
+本项目与原版《Human Resource Machine》及 Tomorrow Corporation 无任何关联。创意灵感来源于此，玩法致敬，但全部代码为独立实现。
 
 ---
 
