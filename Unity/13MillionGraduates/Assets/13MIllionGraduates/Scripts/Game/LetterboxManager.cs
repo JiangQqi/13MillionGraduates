@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal;
@@ -25,6 +26,7 @@ namespace Game
 
         private Canvas        m_BlackBarCanvas;
         private RectTransform m_BarLeft, m_BarRight, m_BarTop, m_BarBottom;
+        private Vector2Int    m_LastScreenSize;
 
         public static Vector2 MousePosition
         {
@@ -52,7 +54,7 @@ namespace Game
             if (fullscreen)
             {
                 Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
-                s_Ins?.Apply();
+                s_Ins?.StartCoroutine(s_Ins.DelayedApply());
             }
             else
             {
@@ -64,7 +66,13 @@ namespace Game
         {
             var size = GetBestWindowSize();
             Screen.SetResolution(size.x, size.y, FullScreenMode.Windowed);
-            s_Ins?.Apply();
+            s_Ins?.StartCoroutine(s_Ins.DelayedApply());
+        }
+
+        private IEnumerator DelayedApply()
+        {
+            yield return null;
+            Apply();
         }
 
         public static Vector2Int GetBestWindowSize()
@@ -90,6 +98,8 @@ namespace Game
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
 
+            m_LastScreenSize = new Vector2Int(Screen.width, Screen.height);
+
             CreateBlackBarOverlay();
             SetWindowed();
         }
@@ -97,6 +107,14 @@ namespace Game
         private void OnDestroy()
         {
             if (s_Ins == this) SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
+
+        private void Update()
+        {
+            var current = new Vector2Int(Screen.width, Screen.height);
+            if (current == m_LastScreenSize) return;
+            m_LastScreenSize = current;
+            Apply();
         }
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode mode) => Apply();

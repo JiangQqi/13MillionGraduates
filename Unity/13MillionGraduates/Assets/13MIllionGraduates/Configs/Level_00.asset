@@ -20,15 +20,9 @@ MonoBehaviour:
   OptimalLines: 0
   OptimalSteps: 0
   GameMode: 0
-  GridRows: 5
-  GridCols: 5
-  InitialDataCubes:
-  - Index: 12
-    Value: 100
-  - Index: 4
-    Value: false
-  - Index: 24
-    Value: 0
+  GridRows: 0
+  GridCols: 0
+  InitialDataCubes: []
   AvailableOperations:
     InBox:
       Enabled: 1
@@ -96,10 +90,36 @@ MonoBehaviour:
   CorrectOperations: "--THIRTEEN MILLIONS GRADUATES--\r\n\r\na:\r\n    INBOX\r\n   
     OUTBOX\r\n    JUMP ANY a\r\n"
   VisualInputCubes:
-  - 1
-  - 1
+  - 34
+  - 98
   - 3
+  - 87
+  - 32
   - 4
+  - 65
+  - 76
+  - 43
+  - 45
+  - 76
+  - 65
+  - 60
+  - 78
+  - 45
+  - 98
+  - 76
+  - 67
+  - 56
+  - 75
+  - 98
+  - 76
+  - 46
+  - 56
+  - 89
+  - 47
+  - 88
+  - 65
+  - 34
+  - 88
   TestInputCubes:
   - Values:
     - 1
@@ -107,7 +127,7 @@ MonoBehaviour:
     - 3
     - 4
   ActiveTalk:
-  - "\u8FD9\u662F\u6253\u62DB\u547C\uFF01"
+  - '                       '
   MoreTalk:
   - "\u8FD9\u662F\u8BF4\u5E9F\u8BDD\uFF01\uFF1F"
   ExampleTalk:
